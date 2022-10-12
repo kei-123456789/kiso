@@ -1,6 +1,6 @@
 <?php
-$id = $_GET["id"];
-$password = $_GET["password"];
+$id = $_POST["id"];
+$password = $_POST["password"];
 
 $message = "NG";
 if ($id === "Andy" && $password === "secret") {
