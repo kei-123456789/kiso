@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["id"])) {
+    header("Location: login.html");
+    return;
+}
 $id = $_SESSION["id"];
 $time = $_SESSION["time"];
 ?>
@@ -15,7 +20,7 @@ $time = $_SESSION["time"];
     <h5>Login at <?php echo $time; ?></h5>
     <hr>
     <ul>
-        <li>ToDo</li>
+        <li><a href="logout.php">logout</a></li>
     </ul>
 </body>
 </html>
